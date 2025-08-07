@@ -119,6 +119,12 @@ body {
     width: 30vw;
   }
 }
+
+@media (min-width: 407px){
+  #hero-headline{
+    font-size: 4.5vw;
+  }
+}
 /* Improved Mobile Menu Styles */
 #mobile-menu {
   position: fixed;
