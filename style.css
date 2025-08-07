@@ -120,8 +120,8 @@ body {
   }
 }
 
-@media (min-width: 407px){
-  #hero-headline{
+@media (max-width: 407px) {
+  #hero-headline {
     font-size: 4.5vw;
   }
 }
