@@ -1,0 +1,139 @@
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f7f7f7;
+  color: #1a1a1a;
+  cursor: none; /* Hide the default cursor */
+}
+
+/* .section-title {
+  @apply text-3xl font-bold text-center mb-16;
+} */
+
+/* Styling for the new glitch effect */
+.glitch-link:hover {
+  color: #4f46e5; /* indigo-600 */
+}
+/* Preloader Styles */
+#preloader {
+  background-color: #f7f7f7;
+  transition: opacity 1s ease-in-out;
+}
+.preloader-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+/* Content entry animation */
+#site-header,
+#site-main,
+#site-footer {
+  transition: opacity 1.2s ease-in-out;
+}
+.content-visible {
+  opacity: 1 !important;
+}
+/* Custom Cursor Styles (Simplified) */
+#cursor-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #1a1a1a;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 1000;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s ease-out, background-color 0.2s ease-out;
+}
+#cursor-dot.hover {
+  transform: translate(-50%, -50%) scale(1.5);
+  background-color: rgba(0, 0, 0, 0.301); /* Indigo color on hover */
+}
+
+/* Project Modal Styles */
+.modal {
+  transition: opacity 0.3s ease;
+}
+.modal-content {
+  transition: transform 0.3s ease;
+}
+/* Animate.js text animation helper */
+.letter {
+  display: inline-block;
+  line-height: 1em;
+}
+/* Marquee Animation Styles */
+.marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+.marquee-content {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 30s linear infinite;
+}
+.marquee-content > * {
+  display: inline-block;
+  padding: 0 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #4b5563; /* gray-600 */
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+/* Inspiration Section Styles */
+#inspirations {
+  background-color: #1a1a1a;
+  overflow: hidden;
+}
+.inspiration-marquee-content {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 60s linear infinite;
+}
+.inspiration-item {
+  display: inline-block;
+  width: 80vw; /* Responsive width for mobile */
+  max-width: 350px; /* Max width for larger screens */
+  height: 60vh; /* Taller height */
+  margin: 0 5vw; /* More horizontal margin */
+  transition: transform 0.3s ease-out;
+  flex-shrink: 0;
+}
+.inspiration-item:hover {
+  transform: scale(1.05);
+}
+.inspiration-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+@media (min-width: 768px) {
+  .inspiration-item {
+    width: 30vw;
+  }
+}
+/* Improved Mobile Menu Styles */
+#mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f7f7f7;
+  z-index: 100;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+#mobile-menu.open {
+  transform: translateX(0);
+}
+body.menu-open {
+  overflow: hidden;
+}
