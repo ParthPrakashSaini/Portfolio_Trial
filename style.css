@@ -17,6 +17,7 @@ body {
 #preloader {
   background-color: #f7f7f7;
   transition: opacity 1s ease-in-out;
+  overflow: hidden;
 }
 .preloader-hidden {
   opacity: 0;
@@ -142,4 +143,28 @@ body {
 }
 body.menu-open {
   overflow: hidden;
+}
+
+/* Hide custom cursor on touch devices */
+@media (max-width: 768px) {
+  body,
+  a,
+  button {
+    cursor: auto; /* Restore default cursor behavior */
+  }
+  #cursor-dot {
+    display: none; /* Hide the custom cursor dot */
+  }
+}
+
+#site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(247, 247, 247, 0.8); /* semi-transparent off-white */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  z-index: 50; /* Ensure it stays on top */
 }
